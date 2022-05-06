@@ -27,6 +27,11 @@ brew bundle
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+## Powerline9k
+```shell
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+```
+
 ## Gopls...
 
 This is needed by a nvim plugin
