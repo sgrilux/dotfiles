@@ -73,8 +73,10 @@ brew "ansible"
 brew "tfenv"
 brew "jsonnet"
 brew "jsonnet-bundler"
-brew "docker-compose"
 brew "lima"
+
+# Docker
+brew "hadolint"
 
 # AWS
 brew "awscli"
@@ -119,4 +121,4 @@ mas "Slack", id: 803453959
 mas "uBlock", id: 1385985095
 mas "MindNode", id: 1289197285
 mas "Slack", id: 803453959
-mas "Notion Web Clipper":, id: 1559269364
+mas "Notion Web Clipper", id: 1559269364
