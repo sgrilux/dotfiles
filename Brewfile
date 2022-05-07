@@ -76,8 +76,12 @@ brew "jsonnet"
 brew "jsonnet-bundler"
 brew "docker-compose"
 brew "lima"
+
+# Terraform
 brew "tfenv"
 brew "terraform-docs"
+brew "tflint"
+
 brew "node"
 
 # Images, Audio, Video
