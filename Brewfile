@@ -69,13 +69,16 @@ brew "watch"
 
 # Ops
 brew "kind"
-brew "awscli"
 brew "ansible"
 brew "tfenv"
 brew "jsonnet"
 brew "jsonnet-bundler"
 brew "docker-compose"
 brew "lima"
+
+# AWS
+brew "awscli"
+brew "cfn-lint"
 
 # Terraform
 brew "tfenv"
