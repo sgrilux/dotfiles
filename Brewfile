@@ -87,6 +87,9 @@ brew "tfenv"
 brew "terraform-docs"
 brew "tflint"
 
+# shellcheck
+brew "shellcheck"
+
 brew "node"
 
 # Images, Audio, Video

@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/Users/$(whoami)/bin:/opt/homebrew/bin:$PATH
+export PATH=/Users/$(whoami)/bin:/opt/homebrew/bin:/Users/$(whoami)/go/bin:$PATH
 
 
 export SDKROOT=$(xcrun --show-sdk-path)
