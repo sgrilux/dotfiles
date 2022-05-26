@@ -16,6 +16,8 @@ cask "vlc"
 cask "wireshark"
 cask "gimp"
 cask "inkscape"
+cask "amethyst"
+
 # cask "jitsi-meet"
 # cask "handbrake"
 # cask "vagrant"
