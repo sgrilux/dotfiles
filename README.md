@@ -4,6 +4,6 @@
 
 My dotfiles and configurations
 
-- [Linux](./linux/README.md
-- [OSX](./macos/README.md
+- [Linux](./linux/README.md)
+- [OSX](./macos/README.md)
 
