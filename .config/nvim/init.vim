@@ -1,3 +1,14 @@
+function WhatOS()
+" return if this is a OSX or Linnux
+" Don't care about Windows as I never use it
+  if !exists("g:os")
+    let g:os = substitute(system('uname'), '\n', '', '')
+  endif
+
+endfunction
+
+call WhatOS()
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'preservim/nerdtree'
@@ -14,7 +25,9 @@ Plug 'sheerun/vim-polyglot'
 
 Plug 'itchyny/lightline.vim'
 
-Plug 'famiu/nvim-reload'
+if g:os == "Darwin"
+  Plug 'famiu/nvim-reload'
+endif
 
 Plug 'nvim-lua/plenary.nvim'
 
