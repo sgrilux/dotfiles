@@ -49,9 +49,8 @@ mkdir -p ~/.config/nvim
 cp ./.config/nvim/* ~/.config/nvim/
 ```
 
-Now open nvmim and run `:Pluginstall` to install all plugins
+To install plugins in vim run `:PlugInstall`.
 
 ## References
 
 - NERDTree: https://github.com/preservim/nerdtree
-

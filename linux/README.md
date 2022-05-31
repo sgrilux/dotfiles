@@ -8,7 +8,7 @@
 sudo ./install.sh
 ```
 
-Now open nvmim and run `:PlugInstall` to install all plugins
+To install plugins in vim run `:PlugInstall`.
 
 ## References
 
