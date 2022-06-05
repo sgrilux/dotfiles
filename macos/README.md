@@ -1,52 +1,56 @@
 # dotfiles for OSX
 
 ## Install brew 
-```shell
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ## Install vim plugin manager
 
-```shell
+```bash
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
 ## Install software from brew 
-```shell
+```bash
 brew bundle
 ```
 
 ## oh-my-zsh
-```shell
+```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
 ## Powerline9k
-```shell
+```bash
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 ```
 
-## Gopls...
+## Zsh Plugins
+```bash
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/Source/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/Source/zsh-autosuggestions
+```
 
+## Gopls...
 This is needed by a nvim plugin
 
-```shell
+```bash
 go install golang.org/x/tools/gopls@latest
 ```
 
 ## Nerd Fonts
 
-```shell
-git clone https://github.com/ryanoasis/nerd-fonts.git
+```bash
+git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
 cd nerd-fonts
 ./install.sh
 ```
 
 ## nvim configuration
-```shell
-mkdir -p ~/.config/nvim
-cp ./.config/nvim/* ~/.config/nvim/
+```bash
+cp -r ./.config/nvim ~/.config/
 ```
 
 To install plugins in vim run `:PlugInstall`.

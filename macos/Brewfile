@@ -7,7 +7,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "sambadevi/powerlevel9k"
 
 cask "obs"
 cask "visual-studio-code"
@@ -31,9 +30,7 @@ cask "turbo-boost-switcher"
 
 # System
 brew "zsh-completions"
-brew "zsh-syntax-highlighting"
 brew "fzf"
-brew "powerlevel9k"
 brew "mas"
 brew "curl"
 brew "wget"
