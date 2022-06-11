@@ -1,57 +1,49 @@
-function WhatOS()
-" return if this is a OSX or Linnux
-" Don't care about Windows as I never use it
-  if !exists("g:os")
-    let g:os = substitute(system('uname'), '\n', '', '')
-  endif
-
-endfunction
-
-call WhatOS()
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'preservim/nerdtree'
-
+Plug 'preservim/nerdcommenter'
 Plug 'junegunn/limelight.vim'
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
-
+Plug 'arcticicestudio/nord-vim'
 Plug 'ryanoasis/vim-devicons'
-
 Plug 'sheerun/vim-polyglot'
-
 Plug 'itchyny/lightline.vim'
-
-if g:os == "Darwin"
-  Plug 'famiu/nvim-reload'
-endif
-
+Plug 'famiu/nvim-reload'
 Plug 'nvim-lua/plenary.nvim'
-
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'karb94/neoscroll.nvim'
 
 call plug#end()
 
+ " basic configuration
 autocmd!
 
 set nocompatible
+set showmatch
+set ignorecase
 set number
 syntax enable
 set fileencoding=utf-8
 set encoding=utf-8
 set title
 set mouse=a
-set autoindent
 set background=dark
 set nobackup
 set hlsearch
 set showcmd
 set expandtab
+set tabstop=4
+set shiftwidth=4
+set autoindent
 set cmdheight=1
 set laststatus=2
 set scrolloff=10
+set cursorline
+set ttyfast
+set splitright
+set splitbelow
 
 " Changing default NERDTree arrows
 let g:NERDTreeDirArrowExpandable = '▸'
@@ -87,10 +79,29 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
-colorscheme spaceduck
+colorscheme nord
 
 " devicon
 let g:webdevicons_enable = 1
 let g:webdevicons_enable_nerdtree = 1
 
+" Narkdown preview
+let g:mkdp_auto_start = 0
+let g:mkdp_auto_close = 0
+let g:mkdp_browser = '/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+let g:mkdp_preview_options = {
+    \ 'mkit': {},
+    \ 'katex': {},
+    \ 'uml': {},
+    \ 'maid': {},
+    \ 'disable_sync_scroll': 0,
+    \ 'sync_scroll_type': 'middle',
+    \ 'hide_yaml_meta': 1,
+    \ 'sequence_diagrams': {},
+    \ 'flowchart_diagrams': {},
+    \ 'content_editable': v:false,
+    \ 'disable_filename': 0,
+    \ 'toc': {}
+    \ }
 
+let g:mkdp_filetypes = ['markdown']
