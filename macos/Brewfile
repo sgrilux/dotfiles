@@ -115,6 +115,7 @@ brew "jo"
 # brew "yarn"
 brew "python"
 brew "pyenv"
+brew "pipenv"
 brew "go"
 
 # App Store

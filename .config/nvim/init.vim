@@ -58,7 +58,14 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 
 set encoding=UTF-8
 
-" coc
+" Some remapping
+nnoremap <C-n> :tabnew<CR>
+nnoremap <C-j> :tabprevious<CR>
+nnoremap <C-k> :tabnext<CR>
+
+" ###################
+" # coc
+" ###################
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gr <Plug>(coc-references)
@@ -68,15 +75,17 @@ nnoremap <silent> <space>s :<C-u>CocList -I symbols<cr>
 nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
 nmap <leader>do <Plug>(coc-codeaction)
 nmap <leader>rn <Plug>(coc-rename)
+
 let g:coc_global_extensions = [
-  \ 'coc-json',
+  \  'coc-json',
   \  'coc-prettier',
-  \  'coc-python',
+  \  'coc-pyright',
   \  'coc-go'
   \ ]
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
 
+" setting UI
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"

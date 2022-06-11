@@ -1,4 +1,6 @@
 {
+    "coc.preferences.useQuickfixForLocations": true,
+    "coc.preferences.formatOnSaveFiletypes": ["python", "terraform"],
 	"languageserver": {
 		"terraform": {
 			"command": "terraform-ls",
@@ -10,6 +12,8 @@
 			"initializationOptions": {},
 			"settings": {}
 		}
-	}
+	},
+    "python.autoComplete.addBrackets": true,
+    "python.linting.enabled": true
 }
 
