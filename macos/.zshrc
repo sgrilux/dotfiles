@@ -78,7 +78,11 @@ source $ZSH/oh-my-zsh.sh
 
 alias vim="nvim"
 
-source /Users/$(whoami)/Source/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /Users/$(whoami)/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export PATH=/Users/$(whoami)/.rbenv/versions/3.0.0/bin:/Users/$(whoami)/.gem/ruby/3.0.0/bin:$PATH
 source /opt/homebrew/opt/powerlevel9k/powerlevel9k.zsh-theme
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

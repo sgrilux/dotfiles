@@ -45,6 +45,10 @@ set ttyfast
 set splitright
 set splitbelow
 
+" provider configuration
+let g:loaded_perl_provider = 0
+let g:python3_host_prog = '/opt/homebrew/bin/python3'
+
 " Changing default NERDTree arrows
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'

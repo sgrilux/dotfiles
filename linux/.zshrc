@@ -78,3 +78,7 @@ source $ZSH/oh-my-zsh.sh
 alias vim="nvim"
 
 export PATH=/home/$(whoami)/.rbenv/versions/3.0.0/bin:/home/$(whoami)/.gem/ruby/3.0.0/bin:$PATH
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

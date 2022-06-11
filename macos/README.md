@@ -17,6 +17,13 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 brew bundle
 ```
 
+## nvim providers
+```bash
+python3 -m pip install --user --upgrade pynvim
+npm install -g neovim
+gem install neovim
+```
+
 ## oh-my-zsh
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -29,7 +36,7 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 
 ## Zsh Plugins
 ```bash
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/Source/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/Source/zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/Source/zsh-autosuggestions
 ```
 
