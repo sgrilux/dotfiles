@@ -10,10 +10,15 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
 Plug 'famiu/nvim-reload'
-Plug 'nvim-lua/plenary.nvim'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'karb94/neoscroll.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'BurntSushi/ripgrep'
+Plug 'nvim-telescope/telescope-file-browser.nvim'
+
 
 call plug#end()
 
@@ -45,6 +50,7 @@ set ttyfast
 set splitright
 set splitbelow
 
+let mapleader = ","
 " provider configuration
 let g:loaded_perl_provider = 0
 let g:python3_host_prog = '/opt/homebrew/bin/python3'
@@ -118,3 +124,11 @@ let g:mkdp_preview_options = {
     \ }
 
 let g:mkdp_filetypes = ['markdown']
+
+" Telescope
+" -------------------------
+nnoremap <leader>ff <cmd>Telescope find_files<CR>
+nnoremap <leader>fg <cmd>Telescope live_grep<CR>
+nnoremap <leader>fb <cmd>Telescope buffers<CR>
+nnoremap <leader>fh <cmd>Telescope help_tags<CR>
+
