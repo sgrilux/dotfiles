@@ -55,6 +55,13 @@ cd nerd-fonts
 ./install.sh
 ```
 
+## For newovim
+
+```bash
+pip3 install -U grip
+python3 -m pip install --user --upgrade pynvim
+```
+
 ## nvim configuration
 ```bash
 cp -r ./.config/nvim ~/.config/
