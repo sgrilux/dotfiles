@@ -18,7 +18,8 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'BurntSushi/ripgrep'
 Plug 'nvim-telescope/telescope-file-browser.nvim'
-
+Plug 'mzlogin/vim-markdown-toc'
+Plug 'PratikBhusal/vim-grip'
 
 call plug#end()
 
@@ -54,6 +55,7 @@ let mapleader = ","
 " provider configuration
 let g:loaded_perl_provider = 0
 let g:python3_host_prog = '/opt/homebrew/bin/python3'
+" let g:python3_host_prog = '/usr/local/bin/python3'
 
 " Changing default NERDTree arrows
 let g:NERDTreeDirArrowExpandable = '▸'
