@@ -67,6 +67,16 @@ python3 -m pip install --user --upgrade pynvim
 cp -r ./.config/nvim ~/.config/
 ```
 
+## Enabling the Python 3 Provider
+```bash
+pip3 install --user --upgrade neovim
+```
+
+## Installing neovim-remote
+```bash
+pip3 install --user --upgrade neovim-remote
+``
+
 To install plugins in vim run `:PlugInstall`.
 
 ## References
