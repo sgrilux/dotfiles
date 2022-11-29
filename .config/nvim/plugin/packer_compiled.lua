@@ -79,25 +79,10 @@ _G.packer_plugins = {
     path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
-  ["async.vim"] = {
+  ReplaceWithRegister = {
     loaded = true,
-    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/async.vim",
-    url = "https://github.com/prabirshrestha/async.vim"
-  },
-  ["asyncomplete-lsp.vim"] = {
-    loaded = true,
-    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/asyncomplete-lsp.vim",
-    url = "https://github.com/prabirshrestha/asyncomplete-lsp.vim"
-  },
-  ["asyncomplete.vim"] = {
-    loaded = true,
-    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/asyncomplete.vim",
-    url = "https://github.com/prabirshrestha/asyncomplete.vim"
-  },
-  catppuccin = {
-    loaded = true,
-    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/catppuccin",
-    url = "https://github.com/catppuccin/nvim"
+    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/ReplaceWithRegister",
+    url = "https://github.com/vim-scripts/ReplaceWithRegister"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -119,60 +104,70 @@ _G.packer_plugins = {
     path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  ["diffview.nvim"] = {
+  ["friendly-snippets"] = {
     loaded = true,
-    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/diffview.nvim",
-    url = "https://github.com/sindrets/diffview.nvim"
+    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/friendly-snippets",
+    url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
   },
   ["glow.nvim"] = {
     loaded = true,
     path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/glow.nvim",
     url = "https://github.com/ellisonleao/glow.nvim"
   },
-  ["haskell-vim"] = {
+  ["lspkind.nvim"] = {
     loaded = true,
-    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/haskell-vim",
-    url = "https://github.com/neovimhaskell/haskell-vim"
+    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
+    url = "https://github.com/onsails/lspkind.nvim"
   },
-  ["hop.nvim"] = {
+  ["lspsaga.nvim"] = {
     loaded = true,
-    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/hop.nvim",
-    url = "https://github.com/phaazon/hop.nvim"
+    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/glepnir/lspsaga.nvim"
   },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  neogit = {
+  ["mason-lspconfig.nvim"] = {
     loaded = true,
-    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/neogit",
-    url = "https://github.com/TimUntersberger/neogit"
+    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason-null-ls.nvim"] = {
+    loaded = true,
+    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/mason-null-ls.nvim",
+    url = "https://github.com/jayp0521/mason-null-ls.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-dap"] = {
+  ["nvim-comment"] = {
     loaded = true,
-    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/nvim-dap",
-    url = "https://github.com/mfussenegger/nvim-dap"
-  },
-  ["nvim-dap-go"] = {
-    loaded = true,
-    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/nvim-dap-go",
-    url = "https://github.com/leoluz/nvim-dap-go"
-  },
-  ["nvim-dap-ui"] = {
-    loaded = true,
-    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
-    url = "https://github.com/rcarriga/nvim-dap-ui"
-  },
-  ["nvim-dap-virtual-text"] = {
-    loaded = true,
-    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/nvim-dap-virtual-text",
-    url = "https://github.com/theHamsta/nvim-dap-virtual-text"
+    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/nvim-comment",
+    url = "https://github.com/terrortylor/nvim-comment"
   },
   ["nvim-lsp-installer"] = {
     loaded = true,
@@ -183,6 +178,23 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-tree.lua"] = {
+    loaded = true,
+    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/nvim-tree/nvim-tree.lua"
+  },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-ts-autotag"] = {
+    load_after = {},
+    loaded = true,
+    needs_bufread = false,
+    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/opt/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -204,16 +216,6 @@ _G.packer_plugins = {
     path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
-  ["telescope-dap.nvim"] = {
-    loaded = true,
-    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/telescope-dap.nvim",
-    url = "https://github.com/nvim-telescope/telescope-dap.nvim"
-  },
-  ["telescope-file-browser.nvim"] = {
-    loaded = true,
-    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
-    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
-  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
@@ -229,24 +231,39 @@ _G.packer_plugins = {
     path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/todo-comments.nvim",
     url = "https://github.com/folke/todo-comments.nvim"
   },
-  ["vim-grammarous"] = {
+  ["vim-maximizer"] = {
     loaded = true,
-    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/vim-grammarous",
-    url = "https://github.com/rhysd/vim-grammarous"
+    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/vim-maximizer",
+    url = "https://github.com/szw/vim-maximizer"
   },
-  ["vim-hindent"] = {
+  ["vim-nightfly-guicolors"] = {
     loaded = true,
-    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/vim-hindent",
-    url = "https://github.com/alx741/vim-hindent"
+    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors",
+    url = "https://github.com/bluz71/vim-nightfly-guicolors"
   },
   ["vim-polyglot"] = {
     loaded = true,
     path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/vim-polyglot",
     url = "https://github.com/sheerun/vim-polyglot"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
+  },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/Users/esgrano/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Load plugins in order defined by `after`
+time([[Sequenced loading]], true)
+vim.cmd [[ packadd nvim-treesitter ]]
+vim.cmd [[ packadd nvim-ts-autotag ]]
+time([[Sequenced loading]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
