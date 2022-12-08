@@ -25,6 +25,7 @@ opt.cursorline = true
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
+opt.cursorcolumn = true
 
 opt.backspace = "indent,eol,start"
 
@@ -37,7 +38,7 @@ opt.splitbelow = true
 
 opt.iskeyword:append("-")
 
-opt.mouse = 'a'
+opt.mouse = "a"
 opt.autoread = true
 opt.foldlevelstart = 99
 opt.scrolloff = 7
@@ -46,4 +47,3 @@ opt.scrolloff = 7
 opt.backup = false
 opt.writebackup = false
 opt.swapfile = false
-
