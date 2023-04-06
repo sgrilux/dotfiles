@@ -37,7 +37,6 @@ return packer.startup(function(use)
 
 	use("szw/vim-maximizer") -- maximize and restore window
 
-	use("tpope/vim-surround")
 	use("vim-scripts/ReplaceWithRegister")
 
 	--devicons
@@ -75,7 +74,11 @@ return packer.startup(function(use)
 	use("neovim/nvim-lspconfig")
 	use("williamboman/nvim-lsp-installer")
 	use("hrsh7th/cmp-nvim-lsp")
-	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
+	use({
+		"glepnir/lspsaga.nvim",
+		branch = "main",
+		requires = { { "nvim-tree/nvim-web-devicons" } },
+	}) -- enhanced lsp uis
 
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
@@ -101,6 +104,9 @@ return packer.startup(function(use)
 			ts_update()
 		end,
 	})
+
+	-- nvim surround
+	use("kylechui/nvim-surround")
 
 	-- auto closing
 	use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...

@@ -29,7 +29,6 @@ mason_lspconfig.setup({
 		"golangci_lint_ls",
 		"gopls",
 		"jsonnet_ls",
-		"sumneko_lua",
 		"pyright",
 		"terraformls",
 		"tflint",
@@ -46,6 +45,8 @@ mason_null_ls.setup({
 		"prettier", -- ts/js formatter
 		"stylua", -- lua formatter
 		"eslint_d", -- ts/js linter
+		"flake8",
+		"cfn-lint",
 	},
 	-- auto-install configured formatters & linters (with null-ls)
 	automatic_installation = true,

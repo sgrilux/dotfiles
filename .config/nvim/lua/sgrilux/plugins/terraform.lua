@@ -1,10 +1,15 @@
--- Terraform
-require'lspconfig'.terraformls.setup{}
-vim.api.nvim_create_autocmd({"BufWritePre"}, {
-  pattern = {"*.tf", "*.tfvars"},
-  callback = vim.lsp.buf.formatting_sync,
+local lspconfig_status, lspconfig = pcall(require, "lspconfig")
+if not lspconfig_status then
+	return
+end
+
+lspconfig.terraformls.setup({})
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+	pattern = { "*.tf", "*.tfvars" },
+	callback = function()
+		vim.lsp.buf.format()
+	end,
 })
 
 -- tflint
-require'lspconfig'.tflint.setup{}
-
+lspconfig.tflint.setup({})
