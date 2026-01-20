@@ -32,7 +32,7 @@ mason_lspconfig.setup({
 		"pyright",
 		"terraformls",
 		"tflint",
-		"tsserver",
+		"ts_ls",
 		"yamlls",
 	},
 	-- auto-install configured servers (with lspconfig)
@@ -44,10 +44,11 @@ mason_null_ls.setup({
 	ensure_installed = {
 		"prettier", -- ts/js formatter
 		"stylua", -- lua formatter
-		"eslint_d", -- ts/js linter
-		"flake8",
-		"cfn-lint",
+		"black", -- python formatter
+		"isort", -- python import sorter
+		"cfn-lint", -- cloudformation linter
+		"tfsec", -- terraform security scanner
 	},
-	-- auto-install configured formatters & linters (with null-ls)
+	-- auto-install configured formatters & linters (with none-ls)
 	automatic_installation = true,
 })

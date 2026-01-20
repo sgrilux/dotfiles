@@ -1,12 +1,15 @@
+-- Suppress deprecation warnings temporarily
+vim.deprecate = function() end
+
 -- import lspconfig plugin safely
-local lspconfig_status, mason = pcall(require, "lspconfig")
-if not mason_status then
+local lspconfig_status, lspconfig = pcall(require, "lspconfig")
+if not lspconfig_status then
 	return
 end
 
 -- import cmp_nvim_lsp plugin safely
-local cmp_nvim_lsp_status, mason_lspconfig = pcall(require, "cmp_nvim_lsp")
-if not cmp_nvim_lsp_status_status then
+local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+if not cmp_nvim_lsp_status then
 	return
 end
 
@@ -42,7 +45,60 @@ for type, icon in pairs(signs) do
 	vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 end
 
+-- configure LSP servers
 lspconfig["terraformls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["pyright"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["yamlls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+	settings = {
+		yaml = {
+			schemas = {
+				["https://raw.githubusercontent.com/awslabs/goformation/master/schema/cloudformation.schema.json"] = "/*.cfn",
+			},
+		},
+	},
+})
+
+lspconfig["bashls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["dockerls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["gopls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["ts_ls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["ansiblels"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["jsonnet_ls"].setup({
+	capabilities = capabilities,
+	on_attach = on_attach,
+})
+
+lspconfig["awk_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 })

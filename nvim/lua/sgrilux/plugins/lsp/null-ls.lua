@@ -1,4 +1,4 @@
--- import null-ls plugin safely
+-- import none-ls plugin safely
 local status, null_ls = pcall(require, "null-ls")
 if not status then
 	return
@@ -11,23 +11,23 @@ local diagnostics = null_ls.builtins.diagnostics -- to setup linters
 -- to setup format on save
 local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
--- configure null_ls
+-- configure none-ls
 null_ls.setup({
 	-- setup formatters & linters
 	sources = {
-		-- this is just temporary
+		-- JavaScript/TypeScript
 		formatting.prettier.with({
 			disabled_filetypes = { "yaml" },
 		}),
-		formatting.stylua, -- lua formatter
-		diagnostics.flake8, -- python linter
+		-- Lua
+		formatting.stylua,
+		-- Python
+		formatting.black,
+		formatting.isort,
+		-- CloudFormation
 		diagnostics.cfn_lint,
-		diagnostics.eslint_d.with({ -- js/ts linter
-			-- only enable eslint if root has .eslintrc.js (not in youtube nvim video)
-			condition = function(utils)
-				return utils.root_has_file(".eslintrc.js") -- change file extension if you use something else
-			end,
-		}),
+		-- Terraform
+		diagnostics.tfsec,
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)

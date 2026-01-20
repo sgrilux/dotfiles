@@ -72,7 +72,6 @@ return packer.startup(function(use)
 
 	-- configure lsp server
 	use("neovim/nvim-lspconfig")
-	use("williamboman/nvim-lsp-installer")
 	use("hrsh7th/cmp-nvim-lsp")
 	use({
 		"glepnir/lspsaga.nvim",
@@ -81,8 +80,8 @@ return packer.startup(function(use)
 	}) -- enhanced lsp uis
 
 	-- formatting & linting
-	use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
-	use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
+	use("nvimtools/none-ls.nvim") -- configure formatters & linters (fork of null-ls)
+	use("jay-babu/mason-null-ls.nvim") -- bridges gap b/w mason & none-ls
 
 	--Markdown preview
 	use("ellisonleao/glow.nvim")
@@ -117,6 +116,43 @@ return packer.startup(function(use)
 
 	-- terminal
 	use("akinsho/toggleterm.nvim")
+
+	-- debugging
+	use("mfussenegger/nvim-dap")
+	use("rcarriga/nvim-dap-ui")
+	use("mfussenegger/nvim-dap-python")
+
+	-- better diagnostics UI
+	use({
+		"folke/trouble.nvim",
+		requires = "nvim-tree/nvim-web-devicons",
+	})
+
+	-- indent guides
+	use("lukas-reineke/indent-blankline.nvim")
+
+	-- which-key for keymap discovery
+	use("folke/which-key.nvim")
+
+	-- LSP progress indicator
+	use("j-hui/fidget.nvim")
+
+	-- Claude Code integration
+	use({
+		"greggh/claude-code.nvim",
+		requires = { "nvim-lua/plenary.nvim" },
+	})
+
+	-- YAML companion for schema validation
+	use("someone-stole-my-name/yaml-companion.nvim")
+
+	-- markdown preview
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()
